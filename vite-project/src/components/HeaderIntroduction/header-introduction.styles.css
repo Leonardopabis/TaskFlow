@@ -1,0 +1,32 @@
+.header-introduction-container {
+    width: 500px;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    text-align: start;
+    align-items: center;
+}
+
+.header-introduction-image {
+    width: 50px;
+    height: 50px;
+    background: url('./src/assets/taskFlowImage.png') center / cover no-repeat;
+    
+}
+
+.header-introduction-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.header-introduction-text h1 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.header-introduction-text h4 {
+    font-size: 16px;
+    font-weight: 300px;
+}
