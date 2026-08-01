@@ -1,5 +1,14 @@
 .big-button {
-    width: 15%;
+    width: 100px;
+    max-width: 15%;
+    height: 100%;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.small-button {
+    width: 75px;
+    max-width: 15%;
     height: 100%;
     border: 1px solid gray;
     border-radius: 10px;

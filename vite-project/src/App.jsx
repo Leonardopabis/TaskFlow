@@ -5,9 +5,19 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import { HeaderIntroduction } from './components/HeaderIntroduction'
 import { Button } from './components/Button'
+import { TaskList } from './components/TaskList'
 
 function App() {
   
+
+  const allListItems = [
+    {
+      id: 1,
+      title: "Estudar react hooks",
+      onFocus: true,
+      
+    },
+  ]
 
   return (
     <>
@@ -20,6 +30,7 @@ function App() {
             <input type="text" placeholder='Nova tarefa' className='new-task-input'/>
             <Button className="big-button purple-bg">Adicione +</Button>
           </div>
+          <TaskList className="field-container task-list-container"/>
         </section>
         <section className='right-content-container'>
 
