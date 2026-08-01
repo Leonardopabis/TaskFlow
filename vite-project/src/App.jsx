@@ -17,8 +17,8 @@ function App() {
       <main>
         <section className='left-content-container'>
           <div className='field-container'>
-            <input type="text" placeholder='Nova tarefa'/>
-            <Button/>
+            <input type="text" placeholder='Nova tarefa' className='new-task-input'/>
+            <Button className="big-button purple-bg">Adicione +</Button>
           </div>
         </section>
         <section className='right-content-container'>
