@@ -50,7 +50,7 @@ function App() {
 
   const [openMenuId, setOpenMenuId] = useState(null)
 
-  function handleOpenMenu(taskId) {
+  function handleFocusTask(taskId) {
     setAllListItems((currentItems) => currentItems.map((item) => ({
       ...item, onFocus: item.id === taskId
     })))
@@ -89,7 +89,7 @@ function App() {
             }} />
             <Button type="submit" className="big-button purple-bg">Adicione +</Button>
           </form>
-          <TaskList className="field-container task-list-container" allListItems={allListItems} />
+          <TaskList className="field-container task-list-container" allListItems={allListItems} setOpenMenuId={setOpenMenuId} onFocusTask={handleFocusTask} onDeleteTask={handleDeleteTask} onEditTask={handleEditTask}/>
         </section>
         <section className='right-content-container'>
 
