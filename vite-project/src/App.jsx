@@ -48,6 +48,34 @@ function App() {
   }
 
 
+  const [openMenuId, setOpenMenuId] = useState(null)
+
+  function handleOpenMenu(taskId) {
+    setAllListItems((currentItems) => currentItems.map((item) => ({
+      ...item, onFocus: item.id === taskId
+    })))
+
+    setOpenMenuId(null)
+  }
+
+  function handleDeleteTask(taskId) {
+    setAllListItems((currentItems) => currentItems.filter((item) => item.id !== taskId))
+    setOpenMenuId(null)
+  }
+
+  function handleEditTask(taskId, newTitle) {
+    const verifiedTitle = newTitle.trim()
+    if (!verifiedTitle) return
+
+    setAllListItems((currentItems) =>
+      currentItems.map((item) => 
+        item.id === taskId
+          ? { ...item, title: verifiedTitle } : item
+    )
+  )
+  setOpenMenuId(null)
+}
+
   return (
     <>
       <header>
@@ -58,7 +86,7 @@ function App() {
           <form className='field-container' onSubmit={handleAddTask}>
             <input type="text" placeholder='Nova tarefa' className='new-task-input' autoComplete='off' ref={inputRef} value={taskTitle} onChange={(event) => {
               setTaskTitle(event.target.value)
-            }}/>
+            }} />
             <Button type="submit" className="big-button purple-bg">Adicione +</Button>
           </form>
           <TaskList className="field-container task-list-container" allListItems={allListItems} />
