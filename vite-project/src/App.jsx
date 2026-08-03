@@ -15,8 +15,27 @@ function App() {
       id: 1,
       title: "Estudar react hooks",
       onFocus: true,
-      
     },
+    {
+      id: 2,
+      title: "Estudar react de novo",
+      onFocus: false,
+    },
+    {
+      id: 3,
+      title: "Estudar react pt3",
+      onFocus: false,
+    },
+    {
+      id: 4,
+      title: "Estudar react v4",
+      onFocus: false,
+    },
+    {
+      id: 5,
+      title: "Estudar react 5",
+      onFocus: false,
+    }
   ]
 
   return (
@@ -30,7 +49,7 @@ function App() {
             <input type="text" placeholder='Nova tarefa' className='new-task-input'/>
             <Button className="big-button purple-bg">Adicione +</Button>
           </div>
-          <TaskList className="field-container task-list-container"/>
+          <TaskList className="field-container task-list-container" allListItens={allListItems}/>
         </section>
         <section className='right-content-container'>
 

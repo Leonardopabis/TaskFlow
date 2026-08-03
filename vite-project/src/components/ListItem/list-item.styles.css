@@ -13,6 +13,10 @@
     width: 20px;
 }
 
+.list-item input:checked {
+    accent-color: blueviolet;
+}
+
 .u-list {
     width: 100%;
 }
@@ -23,10 +27,27 @@
     gap: 10px;
 }
 
+.on-focus-container {
+    width: 60px;
+    height: 25px;
+    background-color: blueviolet;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.on-focus-container p {
+    color: white;
+    font-size: 12px;
+}
+
 .text {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    justify-content: center;
 }
 
 .right-container {

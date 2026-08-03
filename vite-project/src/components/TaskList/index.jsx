@@ -2,7 +2,7 @@ import { Button } from '../Button'
 import { ListItem } from '../ListItem'
 import './task-list.styles.css'
 
-export function TaskList(props) {
+export function TaskList({allListItens, ...props}) {
     return (
         <div {...props}>
             <div className="buttons-container">
@@ -11,7 +11,9 @@ export function TaskList(props) {
                 <Button className="small-button">Concluídas</Button>
             </div>
             <ul className='u-list'>
-                <ListItem/>
+                {allListItens.map((item) => (
+                    <ListItem key={item.id} name={item.title} onFocus={item.onFocus} />
+                ))}
             </ul>
         </div>
     )
