@@ -34,6 +34,7 @@ body {
   align-items: center;
   padding-left: 10px;
   background-color: transparent;
+  outline: none;
 }
 
 .purple-bg {
