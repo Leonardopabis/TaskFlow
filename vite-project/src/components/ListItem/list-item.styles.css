@@ -1,12 +1,15 @@
 .list-item {
-    width: 100%;
-    height: 50px;
-    border: 1px solid gray;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 10px;
-    
+  width: 100%;
+  min-height: 60px;
+
+  border: 1px solid gray;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px 10px;
 }
 
 .list-item input {
@@ -68,4 +71,89 @@
 
 .dotsMenuImg {
     width: 20px;
+}
+
+.dots-menu-container {
+  position: relative;
+}
+
+.task-options-menu {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 8px);
+
+  width: 140px;
+  padding: 6px;
+
+  background-color: white;
+  border: 1px solid #d4d4d4;
+  border-radius: 10px;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+
+  z-index: 100;
+}
+
+.task-options-menu button {
+  display: block;
+
+  width: 100%;
+  padding: 10px;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: transparent;
+
+  text-align: left;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.task-options-menu button:hover {
+  background-color: #eeeeee;
+}
+
+.task-options-menu .delete-option {
+  color: #d11a2a;
+}
+
+.task-options-menu .delete-option:hover {
+  background-color: #ffe8e8;
+}
+
+.edit-task-form {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.edit-task-input {
+  width: 180px;
+  padding: 6px 8px;
+
+  border: 1px solid blueviolet;
+  border-radius: 6px;
+
+  outline: none;
+}
+
+.save-edit-button,
+.cancel-edit-button {
+  padding: 6px 8px;
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.save-edit-button {
+  color: white;
+  background-color: blueviolet;
+}
+
+.cancel-edit-button {
+  background-color: #dddddd;
 }

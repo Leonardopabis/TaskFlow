@@ -68,13 +68,13 @@ function App() {
     if (!verifiedTitle) return
 
     setAllListItems((currentItems) =>
-      currentItems.map((item) => 
+      currentItems.map((item) =>
         item.id === taskId
           ? { ...item, title: verifiedTitle } : item
+      )
     )
-  )
-  setOpenMenuId(null)
-}
+    setOpenMenuId(null)
+  }
 
   return (
     <>
@@ -89,7 +89,15 @@ function App() {
             }} />
             <Button type="submit" className="big-button purple-bg">Adicione +</Button>
           </form>
-          <TaskList className="field-container task-list-container" allListItems={allListItems} setOpenMenuId={setOpenMenuId} onFocusTask={handleFocusTask} onDeleteTask={handleDeleteTask} onEditTask={handleEditTask}/>
+          <TaskList
+            className="field-container task-list-container"
+            allListItems={allListItems}
+            openMenuId={openMenuId}
+            setOpenMenuId={setOpenMenuId}
+            onFocusTask={handleFocusTask}
+            onDeleteTask={handleDeleteTask}
+            onEditTask={handleEditTask}
+          />
         </section>
         <section className='right-content-container'>
 
